@@ -1,18 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>First Task</title>
 </head>
 <body>
-    <h1>
-    Заголовок первого уровня, обычно один на странице,
-    часто совпадает с title и является наиболее важным текстом на странице для пользователей и
-        поисковых систем так как выводится крупно в начале страницы</h1>
-    <p>
-        Абзац текста.<em>Важный текст.</em>
-        <br>Перенос строки.
-        <strong>Очень важный текст</strong>
-    </p>
+    <ol>
+        <li><a href="https://example.com" id="example">абсолютная ссылка на главную сайта example.com в протоколе https</a></li>
+        <li><a href="index.html">абсолютная гиперссылка на главную страницу сайта example.com </a> </li>
+        <li><a href="ftp://example.com/myfile.zip">ссылку на файл на сервере FTP без авторизации </a> </li>
+        <li><a href="ftp://user:password@example.com/myfile.zip">ссылку на файл на сервере FTP с авторизацией</a> </li>
+        <li><a href="http://ochprosto.com/sdelat-ssylku-na-opredelennuyu-chast-stranicy#top">ссылку на фрагмент страницы некоторого сайта</a></li>
+        <li><a href="#example">ссылку на фрагмент текущей страницы</a> </li>
+        <li><a href="https://www.onlinestor.com/?product=socks&color=black">Ссылка с двумя параметрами в URL </a></li>
+        <li><h4 style="margin: 0">Навигация</h4>
+            <ul>
+                <li><a href="#example">Top</a></li>
+                <li><a href="#forma">Form</a></li>
+            </ul>
+        </li>
+        <li><a>ссылку без href</a></li>
+        <li><a href="">ссылку с пустым href</a></li>
+        <li><a href="https://example.com" rel="nofollow">ссылку, по которой запрещен переход поисковикам </a></li>
+        <li><a href="http://example.ru" content="noindex">запрещенную для индексации поисковиками</a> </li>
+        <li> <a href="https://en.wikipedia.org/wiki/Rick_and_Morty" title="source">Rick and Morty </a> is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block, Adult Swim. The series follows the misadventures of cynical mad scientist Rick Sanchez and his good-hearted, but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures.
+            Roiland voices the eponymous characters, with Chris Parnell, Spencer Grammer and Sarah Chalke voicing the rest of Rick and Morty's family. The series originated from an animated short parody film of Back to the Future, created by Roiland for Channel 101, a short film festival co-founded by Harmon. The series has been acclaimed by critics for its originality, creativity and humor.
+            The current fifth season premiered on June 20, 2021, and consists of ten episodes. A sixth season was confirmed as part of a long-term deal in May 2018 that ordered 70 new episodes over an unspecified number of seasons </li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0010/3134/0085/products/CaliConnected_Rick_Morty_Space_Beach_Sticker_1_800x.jpg" width="400" height="276" alt="Rick and Morty"> </li>
+        <li> <img src="https://i.scdn.co/image/ab67706c0000bebbe871446e4f5cd031761ede82" width="800" height="800" alt="Rick and Morty" usemap="#navigation">
+            <map name="navigation">
+                <area shape="circle" coords="500,500,220" href="https://www.php.net">
+                <area shape="rect" coords="0,0,240,240" href="https://info-comp.ru">
+            </map></li>
+        <li><a href="./oneMore.html">относительную на страницу в текущем каталоге </a> </li>
+        <li><a href="./about/jv.html">относительную на страницу в каталоге about</a> </li>
+        <li><a href="../hooly.html">относительную на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../peggy.html">относительную на страницу в каталоге двумя уровнями выше</a></li>
+        <li><a href="/">сокращенную на главную</a> </li>
+        <li><a href="/gooogl.html">сокращенную ссылку на внутреннюю.</a> </li>
+    </ol>
+    <h1 style="text-align: center" id="forma">Форма для заполнения</h1>
+    <form>
+        <label>
+            Name:<br />
+            <input name="field-name-1"
+                   value="input your name" />
+        </label><br/>
+        <label>
+            Email:<br >
+            <input name="field-email"
+                   value="test@example.com"
+                   type="email" />
+        </label><br/>
+        <label>
+            Your birthday:<br/>
+            <input name="field-date"
+                   value="2002-08-13"
+                   type="date" />
+        </label><br/>
+        Gender:<br/>
+        <label><input type="radio" checked="checked"
+                      name="radio-group-1" value="Значение1"/>
+            man</label>
+        <label><input type="radio"
+                      name="radio-group-1" value="Значение2"/>
+            female</label><br/>
+        <label><br/>
+        number of limbs:<br/>
+        <label><input type="radio"
+                      name="radio-group-2" value="one"/>
+            1</label>
+        <label><input type="radio"
+                      name="radio-group-2" value="two"/>
+            2</label>
+        <label><input type="radio"
+                      name="radio-group-2" value="three"/>
+            3</label>
+        <label><input type="radio"
+                      name="radio-group-2" value="more"/>
+            4</label><br/>
+        </label>
+        <label>
+            Your SuperPowers:
+            <br/>
+            <select name="field-name-4[]"
+                    multiple="multiple">
+                <option value="Значение1">immortality</option>
+                <option value="Значение2">passing through walls</option>
+                <option value="Значение3">levitation</option>
+            </select>
+        </label><br/>
+        <label>
+            Your bio:<br/>
+            <textarea name="field-name-2">Wright there</textarea>
+        </label><br/>
+        <label><input type="checkbox"
+                      name="check-1" />
+            familiarized with the contract</label><br/>
+        <input type="submit" value="Отправить"/>
+    </form>
 </body>
 </html>
